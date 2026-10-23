@@ -1,0 +1,16 @@
+<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MapDraft — Ban &amp; Pick</title><link rel="stylesheet" href="/style.css"></head><body data-page="ban"><header class="hd"><b>VALORANT<i> MAPDRAFT</i></b><span>TOURNAMENT SYSTEM</span><a href="/ban-map/" class="on">BAN &amp; PICK</a><a href="/select-map/">GACHA MAP</a><a href="/overlay/" target="_blank">OBS OVERLAY</a></header>
+<div class="app">
+<section class="panel"><h2>PENGATURAN MATCH</h2>
+<label>Team A<input id="tA" value="TEAM A" maxlength="24"></label><label>Team B<input id="tB" value="TEAM B" maxlength="24"></label>
+<label>Format<select id="bo"><option value="1">BO1</option><option value="3" selected>BO3</option><option value="5">BO5</option><option value="7">BO7</option><option value="c">Custom BO</option></select></label>
+<label id="cw" hidden>Jumlah map (1-9)<input id="boN" type="number" min="1" max="9" value="3"></label>
+<label>Mode<select id="mode"><option value="gacha">Pure Gacha</option><option value="ban">Ban &amp; Pick</option><option value="tournament">Tournament Gacha</option></select></label>
+<label>Durasi gacha (detik, 3-12)<input id="spin" type="number" min="3" max="12" step="0.5" value="6.5"></label>
+<label>Map pool aktif</label><div id="pool"></div>
+<label>Urutan veto (bisa diedit)<textarea id="seq"></textarea></label><div class="err" id="err"></div>
+<button class="red" id="start">MULAI MATCH BARU</button><button id="reset">RESET MATCH</button></section>
+<section class="panel"><div class="stat" id="stat"></div><div class="big" id="main"></div><div id="info"></div>
+<div class="vp" id="vp"></div><div class="chips" id="chips"></div><div id="turn"></div><div id="ctl"></div>
+<h2>RIWAYAT <button id="hclr" style="float:right;padding:2px 8px">HAPUS SEMUA</button></h2><div id="hist"></div></section>
+<section class="panel"><h2>MAP TERPILIH</h2><div id="sl" style="display:flex;flex-direction:column;gap:8px"></div></section>
+</div><script src="/app.js"></script><script src="/ban-map/ban.js"></script></body></html>

@@ -1,0 +1,15 @@
+[
+{"id": "abyss", "name": "Abyss", "hue": 265, "image": ""},
+{"id": "ascent", "name": "Ascent", "hue": 200, "image": ""},
+{"id": "bind", "name": "Bind", "hue": 25, "image": ""},
+{"id": "breeze", "name": "Breeze", "hue": 175, "image": ""},
+{"id": "fracture", "name": "Fracture", "hue": 10, "image": ""},
+{"id": "haven", "name": "Haven", "hue": 140, "image": ""},
+{"id": "icebox", "name": "Icebox", "hue": 210, "image": ""},
+{"id": "lotus", "name": "Lotus", "hue": 320, "image": ""},
+{"id": "pearl", "name": "Pearl", "hue": 190, "image": ""},
+{"id": "split", "name": "Split", "hue": 45, "image": ""},
+{"id": "sunset", "name": "Sunset", "hue": 15, "image": ""},
+{"id": "corrode", "name": "Corrode", "hue": 85, "image": ""},
+{"id": "summit", "name": "Summit", "hue": 230, "image": ""}
+]

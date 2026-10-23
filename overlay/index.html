@@ -1,0 +1,16 @@
+<!doctype html><html lang="id"><head><meta charset="utf-8"><title>MapDraft — OBS Overlay</title><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/overlay/overlay.css"></head><body class="ov">
+<div id="st"><div class="in"><div class="kick" id="kick"></div>
+<div class="hdr"><div class="tm" id="a"><span id="an"></span></div><div class="bo"><b id="bo"></b><small id="mp"></small></div><div class="tm" id="b"><span id="bn"></span></div></div>
+<div class="vp" id="vp"><div class="mk"></div></div><div id="sl"></div></div></div>
+<script src="/app.js"></script><script>
+(async()=>{await MD.init();const $=i=>document.getElementById(i);
+if(new URLSearchParams(location.search).get('transparent')==='1')document.body.classList.add('tr');
+const fit=()=>$('st').style.transform=`scale(${Math.min(innerWidth/1920,innerHeight/1080)})`;fit();addEventListener('resize',fit);
+const stage=new MD.Stage($('vp'),()=>render());let S=null;
+function render(){const m=S.match;stage.sync(S);const v=MD.view(S,stage);
+ $('an').textContent=m?m.teamA:'TEAM A';$('bn').textContent=m?m.teamB:'TEAM B';
+ $('bo').textContent=m?'BO'+m.n:'BO';$('mp').textContent=m?`MAP ${Math.min(v.picks.length+(v.drawing?1:0)||1,m.n)}/${m.n}`:'—';
+ $('kick').textContent=MD.status(S,stage);$('kick').classList.toggle('live',v.drawing);
+ $('sl').style.setProperty('--n',m?m.n:1);MD.slots($('sl'),S,stage)}
+MD.connect(s=>{S=s;render()});})();
+</script></body></html>
